@@ -1,0 +1,30 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "express": "^3.x",
+    "mongojs": "^2.4.0"
+  },
+  "author": "Michel",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "eslint-plugin-angular": "^1.1.1",
+    "eslint-plugin-mocha": "^3.0.0"
+  }
+}

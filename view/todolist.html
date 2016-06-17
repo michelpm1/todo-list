@@ -1,0 +1,17 @@
+<div class="form group col-xs-12">
+    <p class="text-center col-xs-8 col-xs-offset-1" style="font-weight: bold;font-size: 15px;">To Do List</p>
+    <button class="btn btn-success btn-lg col-xs-2" type="button" id="newReminder" ng-click="open()">Create Reminder</button>
+
+    </br>
+    <ul class="related-results rel-results col-xs-12 col-sm-4 col-sm-offset-4 text-center list-styling">
+        <li class="li-routedetails li-style animate-me" ng-repeat="item in list | limitTo: paginationLimit()">
+            <div><input type="checkbox" id='deleteItem' ng-click='remove(item)'></div>
+            <div id="itemText" class="text-center"><p>{{item.text}}</p></div>
+            <div class="text-center"><buttom ng-click='edit(item)'>edit</buttom></div>
+        </li>
+
+    </ul>
+</div>
+<button class="bt-search animate-me col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-5"ng-hide="hasMoreItemsToShow()" ng-click="showMoreItems()" style="margin-bottom: 12px;">
+    Show more
+</button>
