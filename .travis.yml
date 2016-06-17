@@ -1,23 +1,21 @@
 language: node_js
-
 os:
-  - 'linux'
-  - 'osx'
-
+- linux
+- osx
 node_js:
-  - '4'
-  - '5'
-
+- '4'
+- '5'
 install:
-  # - npm config set registry http://23.251.144.68
-  # Disable the spinner, it looks bad on Travis
-  - 'npm config set spin false'
-  # Log HTTP requests
-  - 'npm config set loglevel http'
-  - 'time npm install'
-
+- npm config set spin false
+- npm config set loglevel http
+- time npm install
 after_script:
-  - 'npm run coveralls'
-
+- npm run coveralls
 script:
-  - 'protractor tests/conf.js'
+- protractor tests/conf.js
+env:
+  global:
+  - secure: 0xtrkA0QKUP6R94hhxFYhimYtJVIz5FX/dKib4ADLQuX/eWapXZeyhYaU+uszghle3cYsq13+tbNxVI0xeBQ+4F5MBJr1ZdxqNHd0Ki0jEIghmg/1qotyMf4lSJb9SMApUE41zkaNUucfDDvEonnjAOZH01I012Fy96o6s8WuoU1hcCQVMXZEjWnRinrKBe6nIG4QIbTsRlYSFeUQJiudIcidFezotoDWxYszBtjcgoUQp2hN7J8UajMAZwoy37WY8UqAYkndHvWfcjZWuo3c9u2ckE1oHGB1QvelIQRm5uu4Qus7w/6ZExkNlNJVw6yNkIfKuI18r23FxHa5sybR8glV+TPvJ7DNjS2wULy9jmnXQEVH9z+M+Fpyp6VvnSAMr7s8ZqxPIkMpp0wUbSE+SsLKVA7cuDEcDnVT0FFfQ73DdzPcDyHlODHoNRsbbRXv8IxDrpnp+8/EZXX1+8RxO6aBfoCh6RuIAD8YkP8g4Ft16ouXCynvwgtxn8RKM3NyxfqCJ6x0nctp7HukY/3Yv2lmrMSKt5Q8BWVmwnI1YRIRIcl0BQIQcQGSuO900EpJcvx7tXnzRwoBUxbCOKEVDnF/++9rAEgSn3PnaTMy8+8yl3x+l3tzP/gM73VMPi6WvtF1qPy5LQAXNlEaEquqKUNrJKr3/nriIR3UnQAGAc=
+  - secure: CKj0Re4CNPq24hI/ZW/q413NuJiCCjMM1/d4YSz2hBUFSQTncRHUaFttsk9C1AsTp9xl4Pu1H0RyMXTkP4oRpZYm6/cMUwYJn8go8EtRt4uaSKa6uLYXJ5YgGn0VFNR7XFrFMaAxg8LtLNtRCXWE1PjU2elX2+xp5MRQ3DzLn3x3gD3OlnbOmZC6nK/Z8qhSKJJSKLcr86kPADfadpguelODkSVifPO1qtlyZ6+Dyh1n3XFLPsHeR+4sf3bLJ60gNq34WlKvl0od10STTFLdKsTs3uIvq6DxviChkJJDzrki5/5G1LZNh4Lx3Q0ReInzNx12LZIPYpFD3BZ8QbZjbYsfvmQCtKkkWtWsygIts3kDJ4wS7PH0UCduLqqXr90+awcM7jnMWgFnpASMRvkMRTGPGSWal39BM4O11kYEpq1WaFCJURNy/vOWofUUMJKtGQwojm1Z9jCMWgDIrTywGDfNrVBhtLkwlc0K1g8renH13C64llSH5XeFumSI94D3zB79b55pkpRhih5E8/ZF9xMyKjz5n+bzNH4wWq+N9CGZG3U/N2U0FGR+WVn5Fh68q6PkELYXGfMzzo8esb7dgFT+BN2X/GifgqvIpHhyc/YNG/QWLtpnf6/sqZMooA88wASr3HqC3yYOHSz5BqPI+ztlVH+fjNYn5+JHMeJNJlg=
+addons:
+  sauce_connect: true
