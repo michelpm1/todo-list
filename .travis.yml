@@ -20,4 +20,4 @@ after_script:
   - 'npm run coveralls'
 
 script:
-  - 'npm test'
+  - 'protractor tests/conf.js'
