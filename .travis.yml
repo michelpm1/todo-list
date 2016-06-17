@@ -11,8 +11,14 @@ install:
 - time npm install
 after_script:
 - npm run coveralls
+before_script:
+- gulp build
+- gulp clean
+- gulp build --env test
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run forever-start-dist || true'
 script:
-- protractor tests/conf.js
+- npm test
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run test-e2e || true'
 env:
   global:
   - secure: 0xtrkA0QKUP6R94hhxFYhimYtJVIz5FX/dKib4ADLQuX/eWapXZeyhYaU+uszghle3cYsq13+tbNxVI0xeBQ+4F5MBJr1ZdxqNHd0Ki0jEIghmg/1qotyMf4lSJb9SMApUE41zkaNUucfDDvEonnjAOZH01I012Fy96o6s8WuoU1hcCQVMXZEjWnRinrKBe6nIG4QIbTsRlYSFeUQJiudIcidFezotoDWxYszBtjcgoUQp2hN7J8UajMAZwoy37WY8UqAYkndHvWfcjZWuo3c9u2ckE1oHGB1QvelIQRm5uu4Qus7w/6ZExkNlNJVw6yNkIfKuI18r23FxHa5sybR8glV+TPvJ7DNjS2wULy9jmnXQEVH9z+M+Fpyp6VvnSAMr7s8ZqxPIkMpp0wUbSE+SsLKVA7cuDEcDnVT0FFfQ73DdzPcDyHlODHoNRsbbRXv8IxDrpnp+8/EZXX1+8RxO6aBfoCh6RuIAD8YkP8g4Ft16ouXCynvwgtxn8RKM3NyxfqCJ6x0nctp7HukY/3Yv2lmrMSKt5Q8BWVmwnI1YRIRIcl0BQIQcQGSuO900EpJcvx7tXnzRwoBUxbCOKEVDnF/++9rAEgSn3PnaTMy8+8yl3x+l3tzP/gM73VMPi6WvtF1qPy5LQAXNlEaEquqKUNrJKr3/nriIR3UnQAGAc=
