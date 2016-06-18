@@ -14,8 +14,8 @@
   "keywords": [],
   "dependencies": {
     "bluebird": "^3.4.0",
+    "body-parser": "^1.15.1",
     "express": "^3.x",
-    "gulp": "^3.9.1",
     "mongojs": "^2.4.0"
   },
   "author": "Michel",
