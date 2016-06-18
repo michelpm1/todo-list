@@ -13,21 +13,29 @@
 ###To install this app please clone the git repo: https://github.com/michelpm1/todo-list.git
 
 
-###Install dependencies:
+####Install dependencies:
 ```bash
 npm install
 ```
-###To run:
+####To run:
 ```bash
 node server
 ```
-###for tests install:
+####then in your browser: http://localhost:3000/#/todolist
+
+
+
+####For tests install:
 ```bash
 npm install -g protractor
 webdriver-manager update
 webdriver-manager start
 ```
-###and run inside tests folder:
+####and run inside tests folder:
 ```bash
 protractor conf.js
 ```
+
+
+
+
