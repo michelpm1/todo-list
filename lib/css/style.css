@@ -11,26 +11,22 @@
 	font-weight: bold;
 }
 
-.ui-accordion-title {
-	border: 1px solid #CCCCCC;
-	cursor: pointer;
-	background: -moz-linear-gradient(top, #CCCCCC, #EEEEEE);
-	padding: 10px;
-	font-size: 16px;
-	font-weight: bold;
-	border-radius: 5px 5px 0px 0px;
-	margin-top: 10px;
-	text-align: left;
+.ui-alert{
+    background-color: #DFF2BF;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
-.ui-accordion-content {
-	border: 1px dashed #CCCCCC;
-	border-top: 0px;
-	border-radius: 0px 0px 5px 5px;
-	background-color: #FFFFFF;
-	padding: 10px;
-	margin-bottom: 10px;
-	font-size: 14px;
-	text-align: left;
+
+.ui-alert-title{
+    color: #4F8A10;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.ui-alert-message{
+    color: #4F8A10;
+
 }
 
 body {
@@ -70,6 +66,7 @@ ul.rel-results {
 
 
 .related-results {
+    margin-top:36px;
 	-moz-animation-delay: 1.5s;
 	-webkit-animation-delay: 1.5s;
 }
@@ -170,3 +167,17 @@ ul .li-routedetails::after {
 }
 
 li:last-child::after { display:none; }
+
+.btnEdit{
+    width: auto;
+    border-color: white !important;
+}
+
+.glyphicon {
+    margin-top: 3px;
+    font-size: 16px !important;
+}
+
+.bt-createReminder{
+    margin-top: 20px;
+}

@@ -14,7 +14,7 @@
                     <div class='col-sm-12'>
                         <div class="form-group">
                             <div class="controls">
-                                <textarea rows="4" cols="50" data-ng-model="item.text" id="text" class="form-control"></textarea>
+                                <textarea rows="4" cols="50" data-ng-model="itemCreate.text" id="text" class="form-control"></textarea>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
 
     </div>
     <div class="modal-footer">
-        <button class="btn btn-success btn-lg" type="button" id="addBtn" ng-click="add(item); close()">Create & Close</button>
+        <button class="btn btn-success btn-lg" type="button" id="addBtn" ng-click="add(itemCreate); close()">Create & Close</button>
         <button class="btn btn-warning btn-lg" type="button" ng-click="close()">Cancel</button>
     </div>
 

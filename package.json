@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,16 @@
   },
   "homepage": "",
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "eslint": "^2.12.0",
     "eslint-plugin-angular": "^1.1.1",
-    "eslint-plugin-mocha": "^3.0.0"
+    "eslint-plugin-mocha": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-mocha": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "require-dir": "^0.3.0"
   }
 }
